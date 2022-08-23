@@ -9,7 +9,7 @@ rm -rf /opt/sh/openresty-1.21.4.1.tar.gz && \
 cd /opt/sh/aux && \
 dnf install -y perl pcre-devel openssl-devel zlib-devel && \
 mkdir /opt/sh/openresty && \
-./configure --prefix=/opt/sh/openresty && \
+./configure --prefix=/opt/sh/openresty --with-http_stub_status_module && \
 gmake && \
 gmake install
 
